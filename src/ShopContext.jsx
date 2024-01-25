@@ -21,11 +21,17 @@ const ShopContextProvider = ({ children }) => {
             );
         }
     };
-
+const clearCart = ()=>{
+    setItems([])
+}
+const removeItem =(itemId)=>{
+    const removeitems = items.filter((item)=>item.id !== itemId)
+    setItems(removeitems)
+}
     console.log(items);
 
     return (
-        <ShopContext.Provider value={{ items, setItems, addToCart }}>
+        <ShopContext.Provider value={{ items, setItems, addToCart,clearCart,removeItem }}>
             {children}
         </ShopContext.Provider>
     );
