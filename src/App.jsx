@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import { useEffect } from 'react';
+
 import Display from './Display';
 import './App.css'
 import Home from './Home'
-import Product from './Product'
+
 import { BrowserRouter,Link,Route,Routes } from 'react-router-dom'
 import Description from './Description';
 import Logo from './assets/img.jpg'
