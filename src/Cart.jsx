@@ -31,14 +31,14 @@ const Cart = () => {
                  <p className='font-bold mt-5 text-gray-500'>${e.price}</p>
                  <p className='mt-6 text-blue-500'>Quantity:<span className='font-bold text-black'>{e.quantity}</span></p>
                  <MdDelete className='' size={25} onClick={()=>removeItem(e.id)}/>
-                 <p className='mt-5'>Total:${Math.floor(total)}</p>
+                 <p className='mt-5'>Total:${total}</p>
                  
                  </div>
                  </div>
         )
            
      })}
-     <p className='font-bold mt-10 text-center'>Total Amount: ${totalPrice}</p>
+     <p className='font-bold mt-10 text-center'>Total Amount: ${totalPrice.toFixed(2)}</p>
      <button className='p-2 mb-6 mt-6 w-56 border  bg-red-400 font-extrabold flex justify-center self-center cursor-pointer' onClick={()=>clearCart()}>clear cart</button>
      </>:<p className='flex items-center justify-center h-screen  text-lg'>Your Cart Is Empty</p>}
      
